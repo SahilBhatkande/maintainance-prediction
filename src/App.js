@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import AirCompressor from './AirCompressor';
 import './App.css';
+import { sensorData } from './data'; // Import sensorData from data.js
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1 className="page-heading">AirCompressor</h1>
+      <div className="boxes-container">
+        {/* Map over each sensor and value in sensorData */}
+        {Object.entries(sensorData).map(([sensorName, { value, unit }], index) => (
+          <AirCompressor key={index} sensorName={sensorName} sensorValue={value} unit={unit} />
+        ))}
+      </div>
     </div>
   );
 }

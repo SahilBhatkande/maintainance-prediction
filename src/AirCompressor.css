@@ -1,0 +1,45 @@
+.air-compressor-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(234, 231, 238);
+}
+
+.card {
+  width: 200px; /* Adjust width as needed */
+  border: 1px solid #f0dcdc; /* Border style */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f7e4e4; /* Default background color */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background-color and transform */
+}
+
+.card:hover {
+  background-color: #b9cbd5; /* Background color on hover */
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.sensorName {
+  font-weight: bold;
+  margin-bottom: 5px; /* Add margin bottom to create space for the horizontal line */
+}
+
+.value {
+  color: blue; /* Color of sensor value */
+  margin-bottom: 5px; /* Add margin bottom to create space for the horizontal line */
+}
+
+.unit {
+  color: green; /* Color of unit */
+  margin-bottom: 5px; /* Add margin bottom to create space for the horizontal line */
+}
+
+.hr-line {
+  border: none;
+  border-top: 1px solid #000; /* Horizontal line color */
+  margin: 5px 0; /* Adjust margin to control spacing */
+}
+
+body {
+  background-color: #9cc4b4;
+}
